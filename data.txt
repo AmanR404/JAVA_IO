@@ -1,1 +1,0 @@
-Employee Payroll data --> ID : 1221 Name : Jack Salary : 51000
