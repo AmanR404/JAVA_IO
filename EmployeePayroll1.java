@@ -12,7 +12,7 @@ public class EmployeePayroll1{
         String salary = sc.next();
 
        try{
-        FileWriter fileWriter = new FileWriter("data.txt");
+        FileWriter fileWriter = new FileWriter("employeePayrollFile.txt");
         fileWriter.write("Employee Payroll data --> ");
         fileWriter.write("ID : " + id);
         fileWriter.write(" Name : " + name);
@@ -23,7 +23,7 @@ public class EmployeePayroll1{
         System.out.println(e);
        }
 
-       File file = new File("data.txt");
+       File file = new File("employeePayrollFile.txt");
        try{
             Scanner scan = new Scanner(file);
             while(scan.hasNextLine()){
