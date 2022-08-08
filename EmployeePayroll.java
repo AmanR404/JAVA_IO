@@ -1,40 +1,25 @@
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.FileWriter;
+import java.util.Scanner;
 public class EmployeePayroll{
-        public static void main(String[] args) {
-            // Check File Exists
-        Path filePath = Paths.get("C://Users/raiam/Downloads/property.png");
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter ID : ");
+        String id = sc.next();
+        System.out.print("Enter name : ");
+        String name = sc.next();
+        System.out.print("Enter Salary : ");
+        String salary = sc.next();
 
-        if(Files.exists(filePath)){
-            System.out.println("File is present");
-        }
-
-            // Delete file
-        if(Files.exists(filePath)){
-            try{
-                Files.delete(filePath);
-            }
-            catch(Exception e){
-                System.out.println(e);
-            }
-        }
-            // Create Directory
-        Path path = Paths.get("C://Users/raiam/Downloads/temp/");
-        try {
-            Files.createDirectory(path);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-            // Create File
-        File myfile = new File("javafile.txt");
-            try{
-                myfile.createNewFile();
-            }
-            catch(Exception e){
-                System.out.println("Unable to create a file");
-            }
-        }
-    }
+       try{
+        FileWriter fileWriter = new FileWriter("data.txt");
+        fileWriter.write(id);
+        fileWriter.write(name);
+        fileWriter.write(salary);
+        fileWriter.close();
+       }
+       catch(Exception e){
+        System.out.println(e);
+       }
+}
+}
