@@ -29,7 +29,7 @@ public class EmployeePayroll{
             e.printStackTrace();
         }
             // Create File
-        File myfile = new File("javafile.txt");
+        File myfile = new File("employeePayrollFile.txt");
             try{
                 myfile.createNewFile();
             }
