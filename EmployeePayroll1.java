@@ -1,7 +1,7 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
-public class EmployeePayroll{
+public class EmployeePayroll1{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter ID : ");
@@ -13,9 +13,10 @@ public class EmployeePayroll{
 
        try{
         FileWriter fileWriter = new FileWriter("data.txt");
-        fileWriter.write(id);
-        fileWriter.write(name);
-        fileWriter.write(salary);
+        fileWriter.write("Employee Payroll data --> ");
+        fileWriter.write("ID : " + id);
+        fileWriter.write(" Name : " + name);
+        fileWriter.write(" Salary : " + salary);
         fileWriter.close();
        }
        catch(Exception e){
