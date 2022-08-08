@@ -22,5 +22,18 @@ public class EmployeePayroll1{
        catch(Exception e){
         System.out.println(e);
        }
+
+       File file = new File("data.txt");
+       try{
+            Scanner scan = new Scanner(file);
+            while(scan.hasNextLine()){
+                String data = scan.nextLine();
+                System.out.println(data);
+            }
+            scan.close();
+       }
+       catch(Exception e){
+        System.out.println(e);
+       }
 }
 }
